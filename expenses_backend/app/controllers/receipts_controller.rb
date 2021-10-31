@@ -17,6 +17,7 @@ class ReceiptsController < ApplicationController
     
         def destroy
             receipt = Receipt.find(params[:id])
+            receipt.items.each{|e| e.delete}
             receipt.delete
         end
     
