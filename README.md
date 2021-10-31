@@ -1,6 +1,7 @@
 README
 
-First step: clone ripo cd to expences_app Run bundle install 
+First step: clone ripo cd to expences_app 
+Run `bundle install` 
 Then 
 Run `rails db:migrate`
 
