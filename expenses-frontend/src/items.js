@@ -1,10 +1,6 @@
 import { Fetching } from "./fetching"
 export class Items {
 
-    // constructor(data){
-    //     this.data = data
-       
-    // }
 
     itemFormEventListener(form){
       form.addEventListener('submit',e => {

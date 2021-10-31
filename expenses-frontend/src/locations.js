@@ -9,7 +9,6 @@ export class Locations {
     }
 
     /////////////////////////////////////////
-    //new function
     toggleLocationAcordion=(element)=>{
         if(element.className === "location_accordion") {
            Locations.hideElements(element)
@@ -17,12 +16,12 @@ export class Locations {
            Locations.showElements(element,"location_accordion")
         }
     }
-//new function
+////////
     locationEventListener=(element)=>{     
         element.addEventListener('click',(e)=> this.toggleLocationAcordion(element))
     }
 
-    //new function
+  ////////
     editEventListener=(element) => {
     
         element.addEventListener('click',(e)=> {
@@ -30,7 +29,7 @@ export class Locations {
             this.toggleEditAcordion(element)
         })
     }
-   // new function
+   ///////
     toggleEditAcordion=(element)=>{
         if(element.className === "edit"){ 
             Locations.hideElements(element)
@@ -74,18 +73,6 @@ export class Locations {
         })
     }
 
-    // locationsEvent(locations,fetching){
-    //  locations.addEventListener('click',e => {
-    //     // Locations.events(e,fetching)
-    //  })   
-    // }
-    
-    // addLocationInputEvent(locationInputElement,fetching){
-    //     locationInput.addEventListener('submit',e => {
-    //         e.preventDefault()
-      
-    //         fetching.createLocation = e
-    // }
 
 // ///////////////////////////////////
     get renderUser(){
@@ -109,20 +96,9 @@ export class Locations {
         this.location(this.data)
     }
 
-    //   add = (button,p)=>{
-    //      button.addEventListener('click',(e)=>{
-    //           p.textContent = parseInt(p.textContent) + 1
-    //      })
-    //   }
-
 
      location(data){
-        //  let incrementButton = document.createElement('button')
-        //  incrementButton.textContent = 'like'
 
-        //   let p = document.createElement('p')
-         
-        //  p.textContent = 0
         let locationDiv = document.createElement('div')
         let locationChildren = document.createElement('div')
         let label = document.createElement('label')
@@ -151,7 +127,7 @@ export class Locations {
 
         locationDiv.appendChild(address)
         locationDiv.appendChild(locationChildren)
-        //change to normal
+        //
         this.editInput(locationChildren)
 
         locationChildren.appendChild(deleteLabel) 
@@ -160,14 +136,9 @@ export class Locations {
         locationChildren.appendChild(br1)
         locationChildren.appendChild(br2)
         locationChildren.appendChild(label)
-
-        // locationDiv.appendChild(incrementButton )
         //
         locationChildren.appendChild(addReceiptInput)
-        // locationDiv.appendChild(p)
 
-        // this.add(incrementButton,p)
-        // call new  function
          this.locationEventListener(address)
          this.addReceiptEventListener(addReceiptInput)
          this.deleteEventListener(deleteL,locationDiv)
@@ -202,7 +173,7 @@ export class Locations {
         editForm.appendChild(editLabel)
         editForm.appendChild(editButton)
         editForm.appendChild(input) 
-        //call new function
+        //
         this.editEventListener(editButton)
     }
 
